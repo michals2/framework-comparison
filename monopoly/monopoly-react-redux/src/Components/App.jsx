@@ -3,7 +3,7 @@ import Board from "./Board";
 import Controls from "./Controls";
 
 const App = () =>
-  <div className="App">
+  <div>
     <Board />
     <Controls />
   </div>;

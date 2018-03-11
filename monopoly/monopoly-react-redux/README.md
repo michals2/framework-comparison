@@ -3,6 +3,19 @@
 #### Component hierarchy
 * App
   * Board
+    * Row
+      * CornerRect
+      * MiddleRect x 9
+    * Row
+      * CornerRect
+      * MiddleRect x 9
+    * Row
+      * CornerRect
+      * MiddleRect x 9
+    * Row
+      * CornerRect
+      * MiddleRect x 9
+  * Controls
 
 #### Considerations
 * No data persistence
