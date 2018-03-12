@@ -1,5 +1,11 @@
+fs = require("fs");
+
 const propertiesData = [
-  { name: "Go", type: "go", corner: true, id: 0 },
+  {
+    name: "Go",
+    type: "go",
+    corner: true
+  },
   {
     name: "Mediterranean Avenue",
     type: "property",
@@ -7,10 +13,12 @@ const propertiesData = [
     color: "#955438",
     rent: [2, 10, 30, 90, 160, 250],
     group: [1, 1, 2],
-    house: 50,
-    id: 1
+    house: 50
   },
-  { name: "Community Chest", type: "community-chest", id: 2 },
+  {
+    name: "Community Chest",
+    type: "community-chest"
+  },
   {
     name: "Baltic Avenue",
     type: "property",
@@ -18,16 +26,18 @@ const propertiesData = [
     color: "#955438",
     rent: [4, 20, 60, 180, 320, 450],
     group: [1, 2, 2],
-    house: 50,
-    id: 3
+    house: 50
   },
-  { name: "Income Tax", type: "tax", cost: 200, id: 4 },
+  {
+    name: "Income Tax",
+    type: "tax",
+    cost: 200
+  },
   {
     name: "Reading Railroad",
     type: "railroad",
     cost: 200,
-    group: [9, 1, 4],
-    id: 5
+    group: [9, 1, 4]
   },
   {
     name: "Oriental Avenue",
@@ -36,10 +46,12 @@ const propertiesData = [
     color: "#aae0fa",
     rent: [6, 30, 90, 270, 400, 550],
     group: [2, 1, 3],
-    house: 50,
-    id: 6
+    house: 50
   },
-  { name: "Chance", type: "chance", id: 7 },
+  {
+    name: "Chance",
+    type: "chance"
+  },
   {
     name: "Vermont Avenue",
     type: "property",
@@ -47,8 +59,7 @@ const propertiesData = [
     color: "#aae0fa",
     rent: [6, 30, 90, 270, 400, 550],
     group: [2, 2, 3],
-    house: 50,
-    id: 8
+    house: 50
   },
   {
     name: "Connecticut Avenue",
@@ -57,10 +68,13 @@ const propertiesData = [
     color: "#aae0fa",
     rent: [8, 40, 100, 300, 450, 600],
     group: [2, 3, 3],
-    house: 50,
-    id: 9
+    house: 50
   },
-  { name: "Jail", type: "jail", corner: true, id: 10 },
+  {
+    name: "Jail",
+    type: "jail",
+    corner: true
+  },
   {
     name: "St. Charles Place",
     type: "property",
@@ -68,15 +82,13 @@ const propertiesData = [
     color: "#d93a96",
     rent: [10, 50, 150, 450, 625, 750],
     group: [3, 1, 3],
-    house: 100,
-    id: 11
+    house: 100
   },
   {
     name: "Electric Company",
     type: "utility",
     cost: 150,
-    group: [10, 1, 2],
-    id: 12
+    group: [10, 1, 2]
   },
   {
     name: "States Avenue",
@@ -85,8 +97,7 @@ const propertiesData = [
     color: "#d93a96",
     rent: [10, 50, 150, 450, 625, 750],
     group: [3, 2, 3],
-    house: 100,
-    id: 13
+    house: 100
   },
   {
     name: "Virginia Avenue",
@@ -95,15 +106,13 @@ const propertiesData = [
     color: "#d93a96",
     rent: [12, 60, 180, 500, 700, 900],
     group: [3, 3, 3],
-    house: 100,
-    id: 14
+    house: 100
   },
   {
     name: "Pennsylvania Railroad",
     type: "railroad",
     cost: 200,
-    group: [9, 2, 4],
-    id: 15
+    group: [9, 2, 4]
   },
   {
     name: "St. James Place",
@@ -112,10 +121,12 @@ const propertiesData = [
     color: "#f7941d",
     rent: [14, 70, 200, 550, 750, 950],
     group: [4, 1, 3],
-    house: 100,
-    id: 16
+    house: 100
   },
-  { name: "Community Chest", type: "community-chest", id: 17 },
+  {
+    name: "Community Chest",
+    type: "community-chest"
+  },
   {
     name: "Tennessee Avenue",
     type: "property",
@@ -123,8 +134,7 @@ const propertiesData = [
     color: "#f7941d",
     rent: [14, 70, 200, 550, 750, 950],
     group: [4, 2, 3],
-    house: 100,
-    id: 18
+    house: 100
   },
   {
     name: "New York Avenue",
@@ -133,14 +143,12 @@ const propertiesData = [
     color: "#f7941d",
     rent: [16, 80, 220, 600, 800, 1000],
     group: [4, 3, 3],
-    house: 100,
-    id: 19
+    house: 100
   },
   {
     name: "Free Parking",
     type: "free-parking",
-    corner: true,
-    id: 20
+    corner: true
   },
   {
     name: "Kentucky Avenue",
@@ -149,10 +157,12 @@ const propertiesData = [
     color: "#ed1b24",
     rent: [18, 90, 250, 700, 875, 1050],
     group: [5, 1, 3],
-    house: 150,
-    id: 21
+    house: 150
   },
-  { name: "Chance", type: "chance", id: 22 },
+  {
+    name: "Chance",
+    type: "chance"
+  },
   {
     name: "Indiana Avenue",
     type: "property",
@@ -160,8 +170,7 @@ const propertiesData = [
     color: "#ed1b24",
     rent: [18, 90, 250, 700, 875, 1050],
     group: [5, 2, 3],
-    house: 150,
-    id: 23
+    house: 150
   },
   {
     name: "Illnois Avenue",
@@ -170,15 +179,13 @@ const propertiesData = [
     color: "#ed1b24",
     rent: [20, 100, 300, 750, 925, 1100],
     group: [5, 3, 3],
-    house: 150,
-    id: 24
+    house: 150
   },
   {
     name: "B. & O. Railroad",
     type: "railroad",
     cost: 200,
-    group: [9, 3, 4],
-    id: 25
+    group: [9, 3, 4]
   },
   {
     name: "Atlatic Avenue",
@@ -187,8 +194,7 @@ const propertiesData = [
     color: "#fef200",
     rent: [22, 110, 330, 800, 975, 1150],
     group: [6, 1, 3],
-    house: 150,
-    id: 26
+    house: 150
   },
   {
     name: "Ventura Avenue",
@@ -197,15 +203,13 @@ const propertiesData = [
     color: "#fef200",
     rent: [22, 110, 330, 800, 975, 1150],
     group: [6, 2, 3],
-    house: 150,
-    id: 27
+    house: 150
   },
   {
     name: "Water Works",
     type: "utility",
     cost: 150,
-    group: [10, 2, 2],
-    id: 28
+    group: [10, 2, 2]
   },
   {
     name: "Marvin Gardens",
@@ -214,10 +218,13 @@ const propertiesData = [
     color: "#fef200",
     rent: [24, 120, 360, 850, 1025, 1200],
     group: [6, 3, 3],
-    house: 150,
-    id: 29
+    house: 150
   },
-  { name: "Go To Jail", type: "go-to-jail", corner: true, id: 30 },
+  {
+    name: "Go To Jail",
+    type: "go-to-jail",
+    corner: true
+  },
   {
     name: "Pacific Avenue",
     type: "property",
@@ -225,8 +232,7 @@ const propertiesData = [
     color: "#1fb25a",
     rent: [26, 130, 390, 900, 1100, 1275],
     group: [7, 1, 3],
-    house: 200,
-    id: 31
+    house: 200
   },
   {
     name: "North Carolina Avenue",
@@ -235,10 +241,12 @@ const propertiesData = [
     color: "#1fb25a",
     rent: [26, 130, 390, 900, 1100, 1275],
     group: [7, 2, 3],
-    house: 200,
-    id: 32
+    house: 200
   },
-  { name: "Community Chest", type: "community-chest", id: 33 },
+  {
+    name: "Community Chest",
+    type: "community-chest"
+  },
   {
     name: "Pennsylvania Avenue",
     type: "property",
@@ -246,17 +254,18 @@ const propertiesData = [
     color: "#1fb25a",
     rent: [28, 150, 450, 1000, 1200, 1400],
     group: [7, 3, 3],
-    house: 200,
-    id: 34
+    house: 200
   },
   {
     name: "Shortline",
     type: "railroad",
     cost: 200,
-    group: [9, 4, 4],
-    id: 35
+    group: [9, 4, 4]
   },
-  { name: "Chance", type: "chance", id: 36 },
+  {
+    name: "Chance",
+    type: "chance"
+  },
   {
     name: "Park Place",
     type: "property",
@@ -264,10 +273,13 @@ const propertiesData = [
     color: "#0072bb",
     rent: [35, 175, 500, 1100, 1300, 1500],
     group: [8, 1, 2],
-    house: 200,
-    id: 37
+    house: 200
   },
-  { name: "Luxury Tax", type: "tax", cost: 100, id: 38 },
+  {
+    name: "Luxury Tax",
+    type: "tax",
+    cost: 100
+  },
   {
     name: "Boardwalk",
     type: "property",
@@ -275,9 +287,12 @@ const propertiesData = [
     color: "#0072bb",
     rent: [50, 200, 600, 1400, 1700, 2000],
     group: [8, 2, 2],
-    house: 200,
-    id: 39
+    house: 200
   }
 ];
 
-export default propertiesData;
+const propertiesData2 = propertiesData.map((c, i) => {
+  return { ...c, id: i };
+});
+
+console.log(propertiesData2);
