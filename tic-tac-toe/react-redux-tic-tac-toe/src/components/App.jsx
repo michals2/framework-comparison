@@ -3,20 +3,23 @@ import "./App.css";
 import Row from "./Row";
 
 const App = ({ state, actions }) => {
-  console.log({ state, actions });
+  // deconstruction
   const { boardState, turn, message } = state;
+  const { changeTurn, checkForWinner, resetBoard, setSquare } = actions;
+
   const dataByRows = [
     boardState.slice(0, 3),
     boardState.slice(3, 6),
     boardState.slice(6)
   ];
 
-  const handleSquareClick = () => {
-    console.log("click");
-  };
+  const handleSquareClick = id => {
+    if (state.gameOver) return;
 
-  const resetBoard = () => {
-    console.log("reset");
+    setSquare(id);
+    checkForWinner();
+
+    changeTurn();
   };
 
   return (
